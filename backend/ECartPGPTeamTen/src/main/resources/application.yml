@@ -22,7 +22,11 @@ spring:
          
       #ES Configurations
       batchSize: 10000
-     
+   data:
+     mongodb:
+        database: ascendTeam10
+        port: 27017
+        uri: mongodb+srv://mongoUser:mongoUser@cluster0.jlhsj7w.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp 
 server:
    port: 9091
 logging:

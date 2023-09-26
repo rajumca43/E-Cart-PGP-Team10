@@ -12,14 +12,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.wm.ECartPGPTeamTen.service.MessageService;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * r0m09yu
  */
 
 @Controller
-@Slf4j
+@RequestMapping("/api/v1")
 public class ECartPgpTenTestController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ECartPgpTenTestController.class);
