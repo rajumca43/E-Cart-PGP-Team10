@@ -22,7 +22,7 @@ import lombok.Setter;
 @Data
 @Setter
 @Getter
-@Document(collection = "wishlist")
+@Document(collection = "products")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -62,25 +62,7 @@ public class ProductsModel {
 	private Integer discount;
 	private String  isHazardous;
 	private String  isReturnable;
-	private Ratings ratings;
+	private RatingsModel ratings;
 
 
-}
-
-@Data
-@Setter
-@Getter
-class Ratings{
-	private Integer  averageRatings;
-	private Integer  numberOfReviews;
-	private List<UserComments>  comments;
-}
-
-@Data
-@Setter
-@Getter
-class UserComments{
-	private String  userId;
-	private String comment;
-	private Integer rate;
 }

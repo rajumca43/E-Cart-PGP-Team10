@@ -3,6 +3,7 @@ package com.wm.ECartPGPTeamTen.model;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 import org.springframework.data.mongodb.core.mapping.MongoId;
@@ -33,13 +34,8 @@ public class WishListModel {
 	
 	private Integer wishListId;
     private String userId;
-    private List<Products> products;
+    
+    @DBRef
+    private List<ProductsModel> products;
 }
 
-@Data
-@Setter
-@Getter
-class Products{
-	private String productId;
-	private String inventoryStatus;
-}

@@ -30,10 +30,11 @@ public class UserService {
 
 	@Autowired
 	UserDao userDao;
-
+	
 	public List<UserModel> getUserDetails(int userId) throws ECartException {
 		try {
 			List<UserModel> list = userDao.findById(userId);
+			list = userDao.findUserSearchesById(userId);
 			logger.info("User details :list {0}" + list);
 			return list;
 		} catch (Exception e) {

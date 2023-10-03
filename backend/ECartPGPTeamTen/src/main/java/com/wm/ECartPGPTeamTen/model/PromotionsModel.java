@@ -1,5 +1,7 @@
 package com.wm.ECartPGPTeamTen.model;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.FieldType;
@@ -23,7 +25,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Promotions {
+public class PromotionsModel {
 
 	@Id
 	@MongoId(FieldType.OBJECT_ID)
@@ -32,8 +34,8 @@ public class Promotions {
 	private Integer promotionID;		
 	private String promotionDescription;	
 	private String promotionType;			
-	private String startDate;				
-	private String endDate;				
+	private Date startDate;				
+	private Date endDate;				
 	private String status;					
 	private String valueChange;			
 	private Integer noOfPromo;				

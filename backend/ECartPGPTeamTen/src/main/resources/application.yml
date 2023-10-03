@@ -26,7 +26,8 @@ spring:
      mongodb:
         database: ascendTeam10
         port: 27017
-        uri: mongodb+srv://mongoUser:mongoUser@cluster0.jlhsj7w.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp 
+        #uri: mongodb+srv://mongoUser:mongoUser@cluster0.jlhsj7w.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp 
+        uri: mongodb://localhost:27017
 server:
    port: 9091
 logging:
@@ -42,6 +43,12 @@ logging:
        root: info
        com.wm.ECartPGPTen: info
        org.springframework: info
+       org:
+        springframework:
+          data:
+            mongodb:
+              core:
+                MongoTemplate: DEBUG
 ---
 spring: 
    profiles: stg

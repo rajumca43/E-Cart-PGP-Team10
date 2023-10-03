@@ -43,27 +43,10 @@ public class UserModel {
 	private String avtar;
 	private String gender;
 	private List<String> role;
-	private List<String> recentSearches;
-	private List<String> favoriteCategories;
+	private String[] recentSearches;
+	private String[] favoriteCategories;
 	private String phone;
-	private Name name;
-	private Address address;
+	private NameModel name;
+	private AddressModel address;
 	
-}
-@Data
-@Setter
-@Getter
-class Name{
-	String firstName;
-	String lastName;
-}
-
-@Data
-@Setter
-@Getter
-class Address{
-	private String  city;
-	private String street;
-	private String number;
-	private String zipcode;
 }
