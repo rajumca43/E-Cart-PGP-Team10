@@ -17,7 +17,7 @@ import com.wm.ECartPGPTeamTen.service.MessageService;
  */
 
 @Controller
-@RequestMapping("/api/v1")
+@RequestMapping("/api/ecarto")
 public class ECartPgpTenTestController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ECartPgpTenTestController.class);
@@ -29,7 +29,7 @@ public class ECartPgpTenTestController {
 	MessageService messageService;
 	
 	
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	@RequestMapping(value = "/status", method = RequestMethod.GET)
 	public ResponseEntity<Object> createProduct() {
 
 		logger.info("Active profile is :"+env.getProperty("spring.config.activate.on-profile"));

@@ -26,7 +26,7 @@ import com.wm.ECartPGPTeamTen.vo.CategoryAndBrandVO;
  */
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/ecartp")
 public class RecentSearchlistController {
 
 	private static final Logger logger = LoggerFactory.getLogger(RecentSearchlistController.class);

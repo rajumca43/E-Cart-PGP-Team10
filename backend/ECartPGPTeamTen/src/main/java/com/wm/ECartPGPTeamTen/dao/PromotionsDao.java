@@ -27,7 +27,7 @@ public class PromotionsDao {
 			if (date != null ) {
 				String a = date.toString();
 				
-				String q = "{ $and: [ {startDate: { $gt: ISODate('"+a+"') }}, {status :{$eq : \"active\"}} ] }";
+				String q = "{ $and: [ {startDate: { $gt: ISODate('"+a+"T00:00:00.000Z') }}, {status :{$eq : \"active\"}} ] }";
 				BasicQuery query = new BasicQuery(q);
 				return mongoTemplate.find(query, PromotionsModel.class);
 			}

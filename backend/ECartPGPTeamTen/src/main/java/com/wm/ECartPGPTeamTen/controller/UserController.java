@@ -22,7 +22,7 @@ import static com.wm.ECartPGPTeamTen.util.ECartUtil.INTERNAL_ERROR;
  */
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/ecartp")
 public class UserController {
 
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
