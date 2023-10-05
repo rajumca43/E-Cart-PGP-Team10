@@ -37,4 +37,11 @@ public class UserDao {
 		return mongoTemplate.find(query, UserModel.class);
 	}
 
+	public List<UserModel> findUserfavbrandsById(Integer userId) {
+		logger.debug("Get User searches..!");
+
+		BasicQuery query = new BasicQuery("{ id : { $eq : " + userId + " }}");
+		query.fields().include("favoriteCategories", "id");
+		return mongoTemplate.find(query, UserModel.class);
+	}
 }
